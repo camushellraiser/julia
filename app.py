@@ -1,288 +1,285 @@
 import streamlit as st
 
 # -------------------------------------------------
-# CONFIGURACIÓN
+# CONFIGURACIÓN GENERAL
 # -------------------------------------------------
 st.set_page_config(
-    page_title="Informe Ejecutivo – Repostería",
+    page_title="Para Julia — Decisión de formación en repostería",
     layout="wide",
-    initial_sidebar_state="collapsed"
 )
 
 # -------------------------------------------------
-# ESTILO EDITORIAL NEGRO
+# ESTILOS (FONDO NEGRO + TIPOGRAFÍA ELEGANTE)
 # -------------------------------------------------
 st.markdown("""
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;600&display=swap');
+
 html, body, [class*="css"] {
     background-color: #000000;
-    color: #f5f5f5;
-}
-
-body {
-    font-family: 'Source Serif 4', serif;
+    color: #f2f2f2;
+    font-family: 'Inter', sans-serif;
 }
 
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
-    color: #ffffff;
 }
 
 .section {
-    max-width: 1150px;
-    margin: auto;
-    padding: 5rem 2rem;
-    border-top: 1px solid #1a1a1a;
-}
-
-.hero {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-}
-
-.hero h1 {
-    font-size: 4.2rem;
-    margin-bottom: 2rem;
-}
-
-.hero p {
-    font-size: 1.25rem;
-    line-height: 1.9;
-    color: #d0d0d0;
-    max-width: 900px;
-}
-
-p, li {
-    font-size: 1.05rem;
-    line-height: 1.9;
-    color: #cfcfcf;
-}
-
-.label {
-    color: #cfa77a;
-    letter-spacing: 0.15em;
-    font-size: 0.75rem;
-    margin-bottom: 1rem;
-}
-
-.compare {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
     margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .card {
-    background: #0b0b0b;
-    border: 1px solid #1c1c1c;
-    border-radius: 28px;
-    padding: 2.8rem;
+    background: #0e0e0e;
+    padding: 2rem;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0,0,0,.5);
+    height: 100%;
 }
 
-.card h3 {
-    margin-bottom: 1.6rem;
-}
-
-.table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 3rem;
-}
-
-.table th, .table td {
-    border-bottom: 1px solid #1f1f1f;
-    padding: 1.2rem;
-    vertical-align: top;
-}
-
-.table th {
-    color: #cfa77a;
-    font-size: 0.85rem;
-    letter-spacing: 0.08em;
-    text-align: left;
-}
-
-.quote {
-    font-style: italic;
-    font-size: 1.35rem;
-    color: #e0e0e0;
-    max-width: 900px;
-}
-
-.footer {
-    text-align: center;
-    color: #777;
-    font-size: 0.85rem;
-    padding-bottom: 4rem;
+.muted {
+    color: #b3b3b3;
+    font-size: 0.95rem;
 }
 </style>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Source+Serif+4:wght@300;400;600&display=swap" rel="stylesheet">
 """, unsafe_allow_html=True)
 
 # -------------------------------------------------
 # PORTADA
 # -------------------------------------------------
 st.markdown("""
-<div class="section hero">
-  <div class="label">INFORME EJECUTIVO COMPARATIVO</div>
-  <h1>Pensado para ti, Julia</h1>
-  <p>
-  Este documento no es una recomendación rápida ni una opinión.
-  Es un análisis completo, construido con tiempo y criterio,
-  para que puedas evaluar con calma qué opción encaja mejor
-  con tu nivel, tu experiencia y el momento profesional en el que estás.
-  </p>
+<div class="section">
+<h1>Julia, hice esto pensando en ti</h1>
+<p class="muted">
+No para decirte qué elegir, sino para que puedas ver con calma, 
+con criterio profesional y con todo el contexto, 
+qué opción encaja mejor con el momento en el que estás como repostera.
+</p>
 </div>
 """, unsafe_allow_html=True)
 
+st.image(
+    "https://images.unsplash.com/photo-1542826438-6f87c33cfd9e",
+    use_container_width=True
+)
+
 # -------------------------------------------------
-# PERFIL
+# CONTEXTO GENERAL
 # -------------------------------------------------
 st.markdown("""
 <div class="section">
-  <h2>Perfil considerado</h2>
-  <p>
-  Este análisis parte de un perfil con experiencia real en repostería.
-  Alguien que ya domina bases, entiende procesos y busca algo más que repetir recetas:
-  busca estructura, profundidad o un entorno alineado con su manera de trabajar.
-  </p>
+<h2>🎯 Punto de partida</h2>
+<p>
+Tú ya sabes de repostería. Tienes técnica, sensibilidad y experiencia.
+Esto no va de “aprender desde cero”, sino de <strong>qué tipo de crecimiento quieres ahora</strong>:
+más estructura, más exigencia, más proyección… o un formato más flexible y creativo.
+</p>
 </div>
 """, unsafe_allow_html=True)
 
 # -------------------------------------------------
-# FILOSOFÍA
+# COMPARACIÓN GENERAL
 # -------------------------------------------------
+st.markdown("## ⚖️ Comparación clara de enfoque")
+
+col1, col2 = st.columns(2)
+
+with col1:
+    st.markdown("""
+    <div class="card">
+    <h3>GQB</h3>
+    <ul>
+        <li>Formación profesional estructurada</li>
+        <li>Pastelería europea clásica y moderna</li>
+        <li>Ritmo exigente y constante</li>
+        <li>Trabajo individual en mesa propia</li>
+        <li>Grupos muy reducidos</li>
+        <li>Enfoque técnico y de alto nivel</li>
+    </ul>
+    </div>
+    """, unsafe_allow_html=True)
+
+with col2:
+    st.markdown("""
+    <div class="card">
+    <h3>CGI</h3>
+    <ul>
+        <li>Formato diplomado</li>
+        <li>Mayor variedad de productos</li>
+        <li>Ritmo más flexible</li>
+        <li>Trabajo más compartido</li>
+        <li>Enfoque creativo y emprendedor</li>
+        <li>Menor presión técnica</li>
+    </ul>
+    </div>
+    """, unsafe_allow_html=True)
+
+# -------------------------------------------------
+# PROGRAMA ACADÉMICO
+# -------------------------------------------------
+st.markdown("## 📚 Contenido y programa académico")
+
+col1, col2 = st.columns(2)
+
+with col1:
+    st.markdown("""
+    <div class="card">
+    <h3>🎂 GQB — Pastelería internacional</h3>
+    <p>
+    Masas quebradas y sablé, hojaldrado clásico y avanzado, masas batidas,
+    cremas clásicas (inglesa, mousseline, bavarois), mousses,
+    entremets, chocolate profesional, bombonería,
+    azúcar artístico, glaseados espejo, heladería
+    y técnicas vanguardistas.
+    </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+with col2:
+    st.markdown("""
+    <div class="card">
+    <h3>🍰 CGI — Diplomado en repostería</h3>
+    <p>
+    Galletería, tartas, cupcakes, brownies,
+    panadería básica, pastelería europea por niveles,
+    chocolatería, fondant,
+    confitería mexicana, heladería
+    y nociones de emprendimiento.
+    </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+# -------------------------------------------------
+# DURACIÓN Y HORARIOS
+# -------------------------------------------------
+st.markdown("## ⏱️ Duración y horarios")
+
+col1, col2 = st.columns(2)
+
+with col1:
+    st.markdown("""
+    <div class="card">
+    <h3>GQB</h3>
+    <p>
+    Modalidad intensiva<br>
+    Duración aproximada: 7 meses<br>
+    Lunes y miércoles<br>
+    6:30 pm – 10:00 pm
+    </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+with col2:
+    st.markdown("""
+    <div class="card">
+    <h3>CGI</h3>
+    <p>
+    Inicio: 22 de enero<br>
+    Miércoles y jueves<br>
+    4:00 pm – 8:00 pm<br>
+    Posibles ajustes según grupo
+    </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+# -------------------------------------------------
+# DISTANCIA
+# -------------------------------------------------
+st.markdown("## 📍 Distancia y trayecto")
+
 st.markdown("""
-<div class="section">
-  <h2>Filosofía de cada escuela</h2>
+Ambas opciones implican prácticamente el mismo trayecto:
+entre **25 y 30 minutos en automóvil**.
+Aquí el punto no es la distancia,
+sino cómo se siente llegar cansada a una clase exigente
+versus una clase más flexible.
+""")
 
-  <div class="compare">
-    <div class="card">
-      <h3>GQB</h3>
-      <p>
-      Formación profesional con enfoque europeo.
-      Prioriza técnica, estructura y exigencia constante.
-      La práctica es individual y el ritmo es sostenido.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>CGI</h3>
-      <p>
-      Formación tipo diplomado.
-      Ambiente más flexible y creativo,
-      con énfasis en disfrutar el proceso y explorar variedad.
-      </p>
-    </div>
-  </div>
-</div>
-""", unsafe_allow_html=True)
+st.image(
+    "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+    caption="Trayectos urbanos similares en ambos casos",
+    use_container_width=True
+)
 
 # -------------------------------------------------
-# PROGRAMA
+# COSTOS
 # -------------------------------------------------
-st.markdown("""
-<div class="section">
-  <h2>Contenido y programa académico</h2>
+st.markdown("## 💰 Inversión aproximada")
 
-  <div class="compare">
+col1, col2 = st.columns(2)
+
+with col1:
+    st.markdown("""
     <div class="card">
-      <h3>GQB – Pastelería internacional</h3>
-      <p>
-      Masas quebradas, hojaldre, masas batidas,
-      cremas clásicas, mousses, entremets,
-      chocolate profesional, bombonería,
-      azúcar artístico, glaseados,
-      heladería y técnicas vanguardistas.
-      </p>
+    <h3>GQB</h3>
+    <p>
+    Inscripción + mensualidades<br>
+    Uniforme y equipo personal<br>
+    Inversión más alta, pero más estructurada
+    </p>
     </div>
+    """, unsafe_allow_html=True)
 
+with col2:
+    st.markdown("""
     <div class="card">
-      <h3>CGI – Diplomado</h3>
-      <p>
-      Galletería, tartas, cupcakes,
-      panadería básica, brownies,
-      pastelería europea por niveles,
-      chocolatería, fondant,
-      confitería mexicana y heladería.
-      </p>
+    <h3>CGI</h3>
+    <p>
+    $25,000 MXN<br>
+    Inscripción, uniforme y seguro adicionales<br>
+    Incluye insumos y préstamo de utensilios
+    </p>
     </div>
-  </div>
-</div>
-""", unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
 
 # -------------------------------------------------
-# TABLA VARIABLES
+# CERTIFICACIÓN
 # -------------------------------------------------
-st.markdown("""
-<div class="section">
-  <h2>Comparación completa de variables</h2>
+st.markdown("## 🎓 Certificación y proyección")
 
-  <table class="table">
-    <tr>
-      <th>Variable</th>
-      <th>GQB</th>
-      <th>CGI</th>
-    </tr>
-    <tr>
-      <td>Duración</td>
-      <td>7 meses intensivos</td>
-      <td>Diplomado de corta duración</td>
-    </tr>
-    <tr>
-      <td>Horarios</td>
-      <td>Lunes y miércoles · 18:30–22:00</td>
-      <td>Miércoles y jueves · 16:00–20:00</td>
-    </tr>
-    <tr>
-      <td>Distancia</td>
-      <td>≈ 26 minutos desde casa</td>
-      <td>≈ 26 minutos desde casa</td>
-    </tr>
-    <tr>
-      <td>Tipo de práctica</td>
-      <td>Individual, estación propia</td>
-      <td>Práctica compartida</td>
-    </tr>
-    <tr>
-      <td>Grupos</td>
-      <td>Máximo 10 alumnos</td>
-      <td>8–15 alumnos</td>
-    </tr>
-    <tr>
-      <td>Equipo y uniforme</td>
-      <td>Filipina, mandil, gorro, cuchillos, termómetro</td>
-      <td>Incluye utensilios y uniforme</td>
-    </tr>
-    <tr>
-      <td>Pagos</td>
-      <td>Inscripción + mensualidades</td>
-      <td>Pago único aproximado</td>
-    </tr>
-    <tr>
-      <td>Certificación</td>
-      <td>Constancia profesional avalada por WACS</td>
-      <td>Constancia de diplomado</td>
-    </tr>
-  </table>
-</div>
-""", unsafe_allow_html=True)
+col1, col2 = st.columns(2)
+
+with col1:
+    st.markdown("""
+    <div class="card">
+    <h3>GQB</h3>
+    <p>
+    Carrera profesional en pastelería<br>
+    Reconocimiento académico formal<br>
+    Proyección más clara a cocina profesional
+    </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+with col2:
+    st.markdown("""
+    <div class="card">
+    <h3>CGI</h3>
+    <p>
+    Constancia de diplomado<br>
+    Enfoque práctico<br>
+    Ideal para consolidar emprendimiento
+    </p>
+    </div>
+    """, unsafe_allow_html=True)
 
 # -------------------------------------------------
 # CIERRE
 # -------------------------------------------------
 st.markdown("""
 <div class="section">
-  <h2>Lectura final</h2>
-  <p class="quote">
-  No se trata de cuál es mejor.
-  Se trata de cuál se alinea más con la repostera que eres hoy
-  y con la que quieres seguir construyendo.
-  </p>
-</div>
-
-<div class="footer">
-Documento elaborado con análisis, detalle y respeto por tu oficio.
+<h2>🖤 Para cerrar</h2>
+<p>
+No hay una opción correcta o incorrecta.
+Solo dos caminos distintos.
+Lo importante es que elijas el que
+<strong>te haga sentir retada, cómoda y emocionada</strong>
+al mismo tiempo.
+</p>
+<p class="muted">
+Esto no es una decisión impuesta.
+Es una invitación a que elijas lo que mejor hable de ti hoy.
+</p>
 </div>
 """, unsafe_allow_html=True)
