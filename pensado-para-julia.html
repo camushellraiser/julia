@@ -4,117 +4,111 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Pensado para ti, Julia</title>
+<title>Informe comparativo – Formación en Repostería</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Serif+4:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 :root{
- --bg:#0b0b0c;
- --card:#121214;
- --text:#eaeaea;
- --soft:#a1a1a6;
- --accent:#cfa77a;
- --line:#1f1f22;
+  --bg:#000000;
+  --panel:#0e0e0e;
+  --line:#1c1c1c;
+  --text:#f2f2f2;
+  --muted:#b3b3b3;
+  --accent:#cfa77a;
 }
 
 *{box-sizing:border-box}
 
 body{
- margin:0;
- background:var(--bg);
- color:var(--text);
- font-family:'Inter',sans-serif;
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Source Serif 4', serif;
 }
 
 .wrapper{
- max-width:1100px;
- margin:auto;
- padding:80px 24px 120px;
+  max-width:1200px;
+  margin:auto;
+  padding:90px 28px 140px;
 }
 
-.hero{
- margin-bottom:120px;
+h1,h2,h3{
+  font-family:'Libre Baskerville', serif;
+  font-weight:700;
 }
 
-.hero h1{
- font-family:'Space Grotesk',sans-serif;
- font-size:4rem;
- letter-spacing:-1px;
- margin-bottom:28px;
+h1{
+  font-size:3.4rem;
+  margin-bottom:40px;
 }
 
-.hero p{
- max-width:820px;
- font-size:1.2rem;
- line-height:1.8;
- color:var(--soft);
+h2{
+  font-size:2.2rem;
+  margin:120px 0 40px;
+}
+
+h3{
+  font-size:1.4rem;
+  margin-bottom:16px;
+}
+
+p{
+  max-width:950px;
+  font-size:1.05rem;
+  line-height:1.9;
+  color:var(--muted);
+  margin-bottom:26px;
 }
 
 .section{
- border-top:1px solid var(--line);
- padding-top:80px;
- margin-top:80px;
+  border-top:1px solid var(--line);
+  padding-top:80px;
 }
 
-.section h2{
- font-family:'Space Grotesk',sans-serif;
- font-size:2.4rem;
- margin-bottom:36px;
- letter-spacing:-.5px;
+.table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:50px;
 }
 
-.section p{
- max-width:880px;
- font-size:1.05rem;
- line-height:1.85;
- margin-bottom:26px;
- color:#d6d6d6;
+.table th,
+.table td{
+  border-bottom:1px solid var(--line);
+  padding:22px 16px;
+  vertical-align:top;
 }
 
-.grid{
- display:grid;
- grid-template-columns:1fr;
- gap:60px;
- margin-top:60px;
+.table th{
+  text-align:left;
+  font-size:0.9rem;
+  letter-spacing:.05em;
+  color:var(--accent);
+  font-weight:600;
 }
 
-.block{
- background:var(--card);
- border-radius:28px;
- padding:48px;
- border:1px solid var(--line);
+.table td{
+  font-size:0.95rem;
+  color:#d6d6d6;
 }
 
-.block h3{
- font-family:'Space Grotesk',sans-serif;
- font-size:1.6rem;
- margin-bottom:20px;
+.col-title{
+  width:26%;
+  color:#ffffff;
+  font-weight:600;
 }
 
-.block p{
- font-size:1rem;
- line-height:1.8;
- color:#cfcfcf;
-}
-
-.quote{
- margin-top:80px;
- max-width:900px;
- font-size:1.3rem;
- font-style:italic;
- color:#d0d0d0;
+.note{
+  margin-top:40px;
+  font-style:italic;
+  color:#cfcfcf;
+  font-size:1.1rem;
 }
 
 .footer{
- margin-top:140px;
- color:var(--soft);
- font-size:.95rem;
-}
-
-@media(min-width:900px){
- .grid{grid-template-columns:1fr 1fr}
- .hero h1{font-size:4.6rem}
+  margin-top:160px;
+  font-size:.9rem;
+  color:#888;
 }
 </style>
 </head>
@@ -122,201 +116,134 @@ body{
 <body>
 <div class="wrapper">
 
-<!-- HERO -->
-<section class="hero">
-<h1>Pensado para ti, Julia</h1>
-<p>
-Este documento no es un resumen rápido ni una comparación superficial.
-Es un análisis completo, hecho con tiempo y criterio,
-para que puedas ver con claridad
-qué ofrece realmente cada opción,
-considerando tu nivel, tu talento
-y el momento profesional en el que estás.
-</p>
-</section>
+<h1>Informe ejecutivo comparativo<br>Formación en Repostería</h1>
 
-<!-- CONTEXTO -->
-<section class="section">
-<h2>Contexto de partida</h2>
 <p>
-No estás empezando de cero.
-Tienes técnica, sensibilidad y experiencia.
-Eso cambia por completo la pregunta.
-No se trata de “aprender repostería”,
-sino de decidir
-<b>dónde vale la pena invertir tu tiempo, energía y enfoque</b>.
+Este documento presenta un análisis comparativo completo entre dos opciones de formación
+en repostería, elaborado considerando un perfil con experiencia previa,
+criterio técnico y sensibilidad creativa.
+No es un material promocional ni una recomendación cerrada,
+sino una exposición clara y estructurada de diferencias reales.
 </p>
-<p>
-Por eso este análisis no se centra en precios ni promesas,
-sino en estructura, profundidad,
-exigencia real y proyección.
-</p>
-</section>
 
-<!-- VARIABLES -->
-<section class="section">
-<h2>Variables analizadas</h2>
+<div class="section">
+<h2>Perfil considerado</h2>
 <p>
-Se evaluaron únicamente factores que impactan tu experiencia real:
-nivel técnico del programa,
-profundidad de contenidos,
-estructura académica,
-ritmo de trabajo,
-forma de práctica,
-ambiente,
-horarios,
-distancia
-y proyección profesional.
-</p>
-<p>
-Se excluyeron trámites y requisitos administrativos
-por no ser determinantes en la calidad formativa.
-</p>
-</section>
-
-<!-- DISTANCIA -->
-<section class="section">
-<h2>Tiempo y logística</h2>
-<p>
-Ambas escuelas presentan una distancia similar desde casa,
-con tiempos promedio de traslado cercanos a los 25–30 minutos.
-Este factor, aunque relevante en el día a día,
-no representa una ventaja estratégica clara para ninguna de las dos opciones.
-</p>
-</section>
-
-<!-- HORARIOS -->
-<section class="section">
-<h2>Horarios y gestión de energía</h2>
-
-<div class="grid">
-<div class="block">
-<h3>GQB</h3>
-<p>
-Clases dos veces por semana en horario nocturno.
-Sesiones más cortas,
-pero con un ritmo alto y concentración constante.
-La estructura favorece el enfoque profundo
-y la continuidad técnica entre clases.
+El análisis parte de un perfil que ya domina fundamentos de repostería,
+con buena ejecución técnica y capacidad crítica.
+Por tanto, se priorizan variables de profundidad,
+exigencia real y retorno formativo,
+no introducciones básicas ni aprendizaje inicial.
 </p>
 </div>
 
-<div class="block">
-<h3>CGI</h3>
-<p>
-Clases en horario vespertino,
-con sesiones más largas y un ritmo más pausado.
-La experiencia es más cómoda,
-con menor presión técnica sostenida.
-</p>
-</div>
-</div>
-</section>
+<div class="section">
+<h2>Comparación estructurada</h2>
 
-<!-- PRACTICA -->
-<section class="section">
-<h2>Forma de trabajo y dinámica en clase</h2>
+<table class="table">
+<tr>
+<th>Variable</th>
+<th>GQB – Carrera profesional</th>
+<th>CGI – Diplomado</th>
+</tr>
 
-<div class="grid">
-<div class="block">
-<h3>GQB</h3>
-<p>
-Trabajo individual,
-estación propia,
-grupos muy reducidos.
-La dinámica se asemeja a un entorno profesional real,
-donde cada decisión técnica es responsabilidad del alumno.
-</p>
-</div>
+<tr>
+<td class="col-title">Duración total</td>
+<td>7 meses (modalidad intensiva)</td>
+<td>Duración corta, formato diplomado</td>
+</tr>
 
-<div class="block">
-<h3>CGI</h3>
-<p>
-Trabajo más compartido,
-ambiente flexible,
-énfasis en el proceso creativo y el disfrute.
-La presión técnica es menor
-y la experiencia es más relajada.
-</p>
-</div>
-</div>
-</section>
+<tr>
+<td class="col-title">Carga semanal</td>
+<td>7 horas semanales, alta concentración</td>
+<td>8 horas semanales, ritmo más relajado</td>
+</tr>
 
-<!-- TECNICA -->
-<section class="section">
-<h2>Nivel técnico y profundidad académica</h2>
+<tr>
+<td class="col-title">Horarios</td>
+<td>Lunes y miércoles, 18:30–22:00</td>
+<td>Miércoles y jueves, 16:00–20:00</td>
+</tr>
 
-<div class="grid">
-<div class="block">
-<h3>GQB</h3>
-<p>
-Programa con fuerte base técnica europea:
-chocolate profesional,
-azúcar,
-entremets,
-glaseados espejo,
+<tr>
+<td class="col-title">Distancia</td>
+<td>Aprox. 26 minutos desde casa</td>
+<td>Aprox. 26 minutos desde casa</td>
+</tr>
+
+<tr>
+<td class="col-title">Tipo de práctica</td>
+<td>Práctica individual, estación propia</td>
+<td>Práctica compartida</td>
+</tr>
+
+<tr>
+<td class="col-title">Tamaño de grupo</td>
+<td>Máximo 10 alumnos</td>
+<td>8–15 alumnos</td>
+</tr>
+
+<tr>
+<td class="col-title">Profundidad técnica</td>
+<td>
+Alta pastelería europea: chocolate profesional,
+azúcar, entremets, glaseados espejo,
 armado avanzado
-y técnicas que requieren precisión constante.
-El enfoque asume un alto potencial del alumno.
-</p>
-</div>
-
-<div class="block">
-<h3>CGI</h3>
-<p>
+</td>
+<td>
 Programa amplio y creativo,
-orientado a reforzar fundamentos
-y explorar variedad.
-Para alguien con experiencia previa,
-gran parte del contenido funciona más como consolidación que como reto.
+mayor énfasis en variedad que en profundidad
+</td>
+</tr>
+
+<tr>
+<td class="col-title">Exigencia</td>
+<td>Alta, enfoque profesional</td>
+<td>Media, enfoque formativo flexible</td>
+</tr>
+
+<tr>
+<td class="col-title">Proyección</td>
+<td>
+Pastelería formal, restaurantes,
+cocinas profesionales
+</td>
+<td>
+Emprendimiento, eventos,
+desarrollo personal
+</td>
+</tr>
+
+<tr>
+<td class="col-title">Retorno para perfil con experiencia</td>
+<td>Elevado: reto y crecimiento técnico</td>
+<td>Moderado: consolidación de bases</td>
+</tr>
+
+</table>
+</div>
+
+<div class="section">
+<h2>Lectura analítica</h2>
+<p>
+La diferencia central entre ambas opciones no radica en calidad,
+sino en intención formativa.
+Una apuesta por estructura, exigencia y profundidad;
+la otra por accesibilidad, creatividad y comodidad.
+Para un perfil con experiencia,
+la variable determinante es si se busca consolidar
+o ser empujado a un siguiente nivel técnico.
+</p>
+
+<p class="note">
+Este informe no pretende dirigir una elección,
+sino ofrecer la información completa
+para que la decisión sea consciente y alineada con el momento profesional.
 </p>
 </div>
-</div>
-</section>
-
-<!-- PROYECCION -->
-<section class="section">
-<h2>Proyección profesional</h2>
-<p>
-GQB se orienta con mayor claridad
-a contextos de pastelería formal,
-restaurantes
-y proyectos con estándares técnicos elevados.
-CGI encaja de forma natural
-con emprendimiento,
-eventos
-y desarrollo creativo independiente.
-</p>
-</section>
-
-<!-- CIERRE -->
-<section class="section">
-<h2>Lectura final</h2>
-<p>
-No hay una opción correcta universal.
-Hay opciones que encajan mejor
-según el momento,
-el objetivo
-y la energía que se quiera invertir.
-</p>
-<p>
-Este documento no busca empujar una decisión,
-sino mostrar con claridad
-qué ofrece cada camino
-para que elijas con información completa.
-</p>
-
-<p class="quote">
-Lo importante para mí
-es que la decisión que tomes
-te haga sentir motivada,
-retada cuando lo necesites,
-y en paz con el proceso.
-</p>
-</section>
 
 <div class="footer">
-Documento elaborado con análisis, tiempo y respeto.
+Documento elaborado con análisis, criterio técnico y respeto por el oficio.
 </div>
 
 </div>
