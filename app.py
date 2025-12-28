@@ -1,247 +1,215 @@
 import streamlit as st
 
-# -----------------------
-# CONFIGURACIÓN GENERAL
-# -----------------------
 st.set_page_config(
-    page_title="Informe Ejecutivo – Formación en Repostería",
+    page_title="Formación en Repostería – Análisis",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
 
-# -----------------------
-# ESTILOS OSCUROS PREMIUM
-# -----------------------
+# =====================
+# ESTILO EDITORIAL
+# =====================
 st.markdown("""
 <style>
 html, body, [class*="css"] {
     background-color: #000000;
-    color: #f2f2f2;
-    font-family: 'Inter', sans-serif;
+    color: #f5f5f5;
+}
+
+body {
+    font-family: 'Source Serif 4', serif;
 }
 
 h1, h2, h3 {
-    font-family: 'IBM Plex Serif', serif;
+    font-family: 'Playfair Display', serif;
     color: #ffffff;
 }
 
-section {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 5rem 2rem;
     border-top: 1px solid #1a1a1a;
 }
 
-.block {
-    background-color: #0e0e0e;
-    border: 1px solid #1c1c1c;
-    border-radius: 18px;
-    padding: 2rem;
+.hero {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.hero h1 {
+    font-size: 4rem;
     margin-bottom: 2rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    line-height: 1.9;
+    color: #d0d0d0;
+    max-width: 900px;
+}
+
+p {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #cfcfcf;
 }
 
 .label {
     color: #cfa77a;
-    letter-spacing: 0.08em;
-    font-size: 0.8rem;
-    margin-bottom: 0.5rem;
+    letter-spacing: 0.15em;
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
 }
 
-.small {
-    color: #b0b0b0;
-    font-size: 0.95rem;
-    line-height: 1.7;
+.compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
 }
 
-.table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1.5rem;
+.card {
+    background: #0b0b0b;
+    border: 1px solid #1c1c1c;
+    border-radius: 24px;
+    padding: 2.5rem;
 }
 
-.table th, .table td {
-    border-bottom: 1px solid #1f1f1f;
-    padding: 1rem;
-    vertical-align: top;
+.card h3 {
+    margin-bottom: 1.5rem;
 }
 
-.table th {
-    color: #cfa77a;
-    text-align: left;
-    font-size: 0.85rem;
-    letter-spacing: 0.06em;
-}
-
-.table td {
-    color: #d8d8d8;
-    font-size: 0.95rem;
+.quote {
+    font-style: italic;
+    font-size: 1.3rem;
+    color: #e0e0e0;
+    max-width: 900px;
 }
 
 .footer {
-    margin-top: 5rem;
-    color: #888;
+    text-align: center;
+    color: #777;
     font-size: 0.85rem;
+    padding-bottom: 4rem;
 }
 </style>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Source+Serif+4:wght@300;400;600&display=swap" rel="stylesheet">
 """, unsafe_allow_html=True)
 
-# -----------------------
-# HERO
-# -----------------------
-st.markdown("<section>", unsafe_allow_html=True)
-st.markdown("## Pensado para ti, Julia")
+# =====================
+# PORTADA
+# =====================
 st.markdown("""
-Este informe no es una recomendación rápida ni una opinión ligera.  
-Es un **análisis completo**, construido con tiempo, criterio y respeto por el oficio,  
-para que puedas ver **todas las variables reales** involucradas en esta decisión.
-""")
-st.markdown("</section>", unsafe_allow_html=True)
+<div class="section hero">
+  <div class="label">INFORME COMPARATIVO</div>
+  <h1>Pensado para ti, Julia</h1>
+  <p>
+  Esto no es una recomendación ni una comparación rápida.
+  Es un análisis completo, hecho con tiempo y criterio,
+  para que puedas ver con claridad qué ofrece realmente cada camino
+  en el momento profesional en el que estás.
+  </p>
+</div>
+""", unsafe_allow_html=True)
 
-# -----------------------
+# =====================
 # CONTEXTO
-# -----------------------
-st.markdown("<section>", unsafe_allow_html=True)
-st.markdown("### Contexto de partida")
+# =====================
 st.markdown("""
-No estás empezando desde cero.  
-Tienes técnica, experiencia y sensibilidad.  
-Eso cambia completamente la pregunta:
-
-> no se trata de *dónde aprender repostería*,  
-> sino de **dónde vale la pena profundizar, exigirte y crecer**.
-""")
-st.markdown("</section>", unsafe_allow_html=True)
-
-# -----------------------
-# VARIABLES
-# -----------------------
-st.markdown("<section>", unsafe_allow_html=True)
-st.markdown("### Variables consideradas")
-st.markdown("""
-Este análisis contempla únicamente factores que impactan tu experiencia real:
-
-- nivel técnico del programa  
-- profundidad y estructura académica  
-- horarios y carga semanal  
-- distancia y logística  
-- forma de trabajo en clase  
-- ambiente y exigencia  
-- proyección profesional  
-
-Trámites y papeleo quedaron fuera porque no definen la calidad formativa.
-""")
-st.markdown("</section>", unsafe_allow_html=True)
-
-# -----------------------
-# COMPARACIÓN TABLA
-# -----------------------
-st.markdown("<section>", unsafe_allow_html=True)
-st.markdown("### Comparación estructurada")
-
-st.markdown("""
-<table class="table">
-<tr>
-<th>Variable</th>
-<th>GQB – Carrera profesional</th>
-<th>CGI – Diplomado</th>
-</tr>
-
-<tr>
-<td>Duración</td>
-<td>7 meses (modalidad intensiva)</td>
-<td>Formato corto tipo diplomado</td>
-</tr>
-
-<tr>
-<td>Carga semanal</td>
-<td>7 h / semana, alta concentración</td>
-<td>8 h / semana, ritmo más relajado</td>
-</tr>
-
-<tr>
-<td>Horarios</td>
-<td>Lunes y miércoles · 18:30–22:00</td>
-<td>Miércoles y jueves · 16:00–20:00</td>
-</tr>
-
-<tr>
-<td>Distancia</td>
-<td>Aprox. 26 minutos</td>
-<td>Aprox. 26 minutos</td>
-</tr>
-
-<tr>
-<td>Tipo de práctica</td>
-<td>Individual, estación propia</td>
-<td>Compartida</td>
-</tr>
-
-<tr>
-<td>Grupos</td>
-<td>Máx. 10 alumnos</td>
-<td>8–15 alumnos</td>
-</tr>
-
-<tr>
-<td>Profundidad técnica</td>
-<td>
-Alta pastelería europea:  
-chocolate profesional, azúcar, entremets, glaseados espejo
-</td>
-<td>
-Programa amplio y creativo,  
-menor profundidad técnica
-</td>
-</tr>
-
-<tr>
-<td>Exigencia</td>
-<td>Alta, enfoque profesional</td>
-<td>Media, enfoque flexible</td>
-</tr>
-
-<tr>
-<td>Proyección</td>
-<td>Pastelería formal, restaurantes, cocina profesional</td>
-<td>Emprendimiento, eventos, desarrollo personal</td>
-</tr>
-
-<tr>
-<td>Retorno para perfil con experiencia</td>
-<td>Alto: reto y crecimiento real</td>
-<td>Moderado: consolidación</td>
-</tr>
-</table>
+<div class="section">
+  <h2>Desde dónde parte este análisis</h2>
+  <p>
+  No estás empezando desde cero. Ya tienes técnica, intuición y experiencia.
+  Por eso aquí no importa “aprender repostería”, sino decidir
+  <strong>dónde vale la pena profundizar, exigirte y crecer</strong>.
+  </p>
+</div>
 """, unsafe_allow_html=True)
 
-st.markdown("</section>", unsafe_allow_html=True)
-
-# -----------------------
-# LECTURA FINAL
-# -----------------------
-st.markdown("<section>", unsafe_allow_html=True)
-st.markdown("### Lectura final")
+# =====================
+# COMPARACIÓN VIVENCIAL
+# =====================
 st.markdown("""
-No hay una opción “correcta” universal.  
-Hay opciones que **encajan mejor según el momento y el objetivo**.
+<div class="section">
+  <h2>Cómo se vive estudiar en cada opción</h2>
 
-Una apuesta por estructura, profundidad y exigencia.  
-La otra por comodidad, creatividad y disfrute.
+  <div class="compare">
+    <div class="card">
+      <h3>GQB</h3>
+      <p>
+      Formación estructurada, exigente y técnica.
+      Ritmo constante, trabajo individual y enfoque profesional.
+      Cada clase se siente como un paso más hacia cocina real.
+      </p>
+    </div>
 
-Lo importante es que la decisión esté tomada con **información completa**,  
-no con intuiciones incompletas.
-""")
-st.markdown("</section>", unsafe_allow_html=True)
+    <div class="card">
+      <h3>CGI</h3>
+      <p>
+      Formación más flexible y cómoda.
+      Ambiente creativo, ritmo más relajado y enfoque amplio.
+      Ideal para disfrutar el proceso sin tanta presión técnica.
+      </p>
+    </div>
+  </div>
+</div>
+""", unsafe_allow_html=True)
 
-# -----------------------
+# =====================
+# VARIABLES CLAVE
+# =====================
+st.markdown("""
+<div class="section">
+  <h2>Comparación clara de variables</h2>
+  <p>
+  Ambas opciones son válidas, pero responden a intenciones distintas.
+  Aquí está lo que realmente cambia:
+  </p>
+
+  <div class="compare">
+    <div class="card">
+      <h3>GQB</h3>
+      <p>
+      • 7 meses intensivos<br>
+      • Práctica individual<br>
+      • Grupos muy reducidos<br>
+      • Alta pastelería europea<br>
+      • Exigencia constante<br>
+      • Proyección profesional formal
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>CGI</h3>
+      <p>
+      • Formato diplomado<br>
+      • Práctica compartida<br>
+      • Grupos más amplios<br>
+      • Enfoque creativo<br>
+      • Menor presión técnica<br>
+      • Orientación a emprendimiento
+      </p>
+    </div>
+  </div>
+</div>
+""", unsafe_allow_html=True)
+
+# =====================
 # CIERRE
-# -----------------------
-st.markdown("<section>", unsafe_allow_html=True)
+# =====================
 st.markdown("""
-> Lo único que importa para mí  
-> es que elijas el camino que te haga sentir  
-> retada cuando lo necesitas  
-> y tranquila con el proceso.
-""")
-st.markdown("</section>", unsafe_allow_html=True)
+<div class="section">
+  <h2>Lectura final</h2>
+  <p class="quote">
+  No hay una decisión correcta universal.
+  Solo importa que el camino que elijas
+  esté alineado con lo que quieres construir ahora.
+  </p>
+</div>
 
-st.markdown("<div class='footer'>Documento elaborado con análisis, criterio técnico y respeto por el oficio.</div>", unsafe_allow_html=True)
+<div class="footer">
+Documento elaborado con tiempo, análisis y respeto por tu oficio.
+</div>
+""", unsafe_allow_html=True)
