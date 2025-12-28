@@ -4,27 +4,144 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pensado para ti, Julia</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
-body{margin:0;font-family:Inter,sans-serif;background:#f6f3f1;color:#2c2c2c}
-.wrapper{max-width:880px;margin:auto;padding:28px}
-.card{background:#fff;border-radius:20px;padding:32px;margin-bottom:24px;box-shadow:0 18px 40px rgba(0,0,0,.08)}
-h1,h2{font-family:'Playfair Display',serif}
-h1{text-align:center}
-.quote{text-align:center;font-style:italic}
+:root{
+ --bg:#f6f3f1;--card:#fff;--text:#2c2c2c;--soft:#6b6b6b;
+ --accent:#8c4a3c;--gold:#c2a47d;
+}
+body{margin:0;background:linear-gradient(180deg,#f9f6f4,#f2edea);
+ font-family:Inter,sans-serif;color:var(--text);}
+.wrapper{max-width:880px;margin:auto;padding:32px 20px 60px;}
+.hero{text-align:center;margin-bottom:48px;}
+.hero h1{font-family:'Playfair Display',serif;font-size:2.8rem;margin-bottom:14px;}
+.hero p{max-width:640px;margin:auto;color:var(--soft);font-size:1.05rem;}
+.card{background:var(--card);border-radius:22px;padding:34px;
+ margin-bottom:28px;box-shadow:0 18px 40px rgba(0,0,0,.08);}
+.card h2{font-family:'Playfair Display',serif;color:var(--accent);
+ font-size:1.6rem;margin-bottom:16px;}
+.compare{display:grid;grid-template-columns:1fr;gap:20px;}
+.option{background:#faf7f6;border-radius:18px;padding:22px;border-left:6px solid;}
+.gqb{border-color:var(--accent);}
+.cgi{border-color:var(--gold);}
+.option h3{margin-top:0;font-size:1.2rem;}
+.option ul{margin:0;padding-left:18px;}
+.option li{margin-bottom:8px;}
+.quote{text-align:center;font-style:italic;font-size:1.15rem;color:#444;}
+@media(min-width:768px){.compare{grid-template-columns:1fr 1fr;}
+.hero h1{font-size:3.2rem;}}
 </style>
 </head>
+
 <body>
 <div class="wrapper">
-<div class="card">
+
+<section class="hero">
 <h1>Pensado para ti, Julia</h1>
-<p>Hice esto pensando en tu nivel y en lo que te puede hacer crecer. Léelo con calma y elige lo que más te haga sentido.</p>
+<p>
+Hice esto con calma y con cuidado, pensando en tu nivel y en lo que ya sabes hacer.
+No es para convencerte de nada, solo para que tengas todo claro y elijas
+lo que más te haga sentido.
+</p>
+</section>
+
+<section class="card">
+<h2>Qué tomé en cuenta</h2>
+<p>
+Nivel técnico, profundidad del programa, horarios, distancia,
+forma de trabajo, ambiente, exigencia y proyección.
+Dejé fuera papeleo porque no define una buena formación.
+</p>
+</section>
+
+<section class="card">
+<h2>Tiempo y distancia</h2>
+<p>
+Las dos escuelas están prácticamente a la misma distancia:
+unos <b>26 minutos en coche</b>. Aquí no hay diferencia real.
+</p>
+</section>
+
+<section class="card">
+<h2>Horarios y ritmo</h2>
+<div class="compare">
+<div class="option gqb">
+<h3>GQB</h3>
+<ul>
+<li>Lunes y miércoles</li>
+<li>6:30 – 10:00 pm</li>
+<li>Ritmo intenso y enfocado</li>
+</ul>
 </div>
-<div class="card">
+<div class="option cgi">
+<h3>CGI</h3>
+<ul>
+<li>Miércoles y jueves</li>
+<li>4:00 – 8:00 pm</li>
+<li>Ritmo más relajado</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="card">
+<h2>Forma de trabajar</h2>
+<div class="compare">
+<div class="option gqb">
+<h3>GQB</h3>
+<ul>
+<li>Práctica 100% individual</li>
+<li>Estación propia</li>
+<li>Grupos muy pequeños</li>
+</ul>
+</div>
+<div class="option cgi">
+<h3>CGI</h3>
+<ul>
+<li>Práctica compartida</li>
+<li>Ambiente flexible</li>
+<li>Menos presión</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="card">
+<h2>Nivel técnico</h2>
+<div class="compare">
+<div class="option gqb">
+<h3>GQB</h3>
+<ul>
+<li>Técnicas europeas avanzadas</li>
+<li>Chocolate profesional</li>
+<li>Azúcar, entremets, glaseados espejo</li>
+</ul>
+</div>
+<div class="option cgi">
+<h3>CGI</h3>
+<ul>
+<li>Programa amplio y creativo</li>
+<li>Refuerzo de bases</li>
+<li>Menor profundidad técnica</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="card">
 <h2>Mi lectura personal</h2>
-<p>GQB te reta más. CGI es más cómodo. Las dos son válidas.</p>
-<p class="quote">Yo te apoyo en cualquiera de las dos.</p>
-</div>
+<p>
+GQB parece retarte más y llevarte a otro nivel técnico.
+CGI es más cómodo y disfrutable.
+Las dos son válidas.
+</p>
+<p class="quote">
+Yo te apoyo en cualquiera de las dos.
+</p>
+</section>
+
 </div>
 </body>
 </html>
